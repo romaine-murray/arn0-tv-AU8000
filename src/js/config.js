@@ -13,20 +13,18 @@
  */
 window.LAUNCHER_CONFIG = {
     apps: [
-        { id: 'xvvl3S1TT1.TizenTubeStandalone', label: 'YouTube', brand: 'youtube' },
-        { id: 'rJeHak5zRg.Spotify', label: 'Spotify' },
-        { id: 'Jz7aUrV2Q4.Twitch', label: 'Twitch' },
-        { id: 'E0P3lRI4H7.MYTF1', label: 'TF1+' },
-        { id: 'org.tizen.netflix-app', label: 'Netflix' },
-        { id: 'org.tizen.primevideo', label: 'Prime Video' },
-        { id: 'MCmYXNxgcu.DisneyPlus', label: 'Disney+' },
-        { id: 'com.samsung.tv.aria-video', label: 'Apple TV' }
+        // Exact app ids are discovered on the TV (All apps shows the focused app's id bottom-left).
+        // Using `match` lets the launcher find each by name/id for now; pin { id: '...' } later
+        // from the TV for reliability.
+        { match: /jellyfin/i, label: 'Jellyfin', brand: 'jellyfin' },
+        { match: /youtube|tizentube|cobalt-yt/i, label: 'YouTube', brand: 'youtube' },
+        { match: /prime ?video/i, label: 'Prime Video', brand: 'primevideo' },
+        { match: /disney/i, label: 'Disney+', brand: 'disneyplus' }
     ],
 
     inputs: [
-        { hdmi: 1, label: 'Nintendo Switch 2', brand: 'switch' },
-        { hdmi: 2, label: 'PlayStation 5', brand: 'playstation' },
-        { hdmi: 4, label: 'Xbox Series X', brand: 'xbox' }
+        { hdmi: 2, label: 'Fire TV Stick', brand: 'firetv' },
+        { hdmi: 3, label: 'Legion Go S', brand: 'legiongo' }
     ],
 
     // How an input tile switches the TV. See README "HDMI inputs".
@@ -35,7 +33,7 @@ window.LAUNCHER_CONFIG = {
     //   'inapp'          show the input full screen inside the launcher (Back returns)
     inputMethod: 'switch+viewer',
 
-    locale: 'en-GB',
+    locale: 'en-US',
 
     theme: {
         // Starting wallpaper (key from js/wallpapers.js), or null for none (plain gradient).
@@ -53,8 +51,8 @@ window.LAUNCHER_CONFIG = {
      * not something you type with a remote.
      */
     weather: {
-        latitude: null,
-        longitude: null,
+        latitude: 17.98,        // Kingston, Jamaica
+        longitude: -76.80,
         unit: 'celsius'         // 'celsius' | 'fahrenheit'
     },
 

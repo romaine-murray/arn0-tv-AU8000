@@ -19,6 +19,7 @@
         app('org.tizen.netflix-app', 'Netflix'),
         app('org.tizen.primevideo', 'Prime Video'),
         app('MCmYXNxgcu.DisneyPlus', 'Disney+'),
+        app('org.jellyfin.tizen', 'Jellyfin'),
         app('com.samsung.tv.aria-video', 'Apple TV'),
         app('rJeHak5zRg.Spotify', 'Spotify'),
         app('Jz7aUrV2Q4.Twitch', 'Twitch'),

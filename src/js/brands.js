@@ -18,6 +18,11 @@ window.BRANDS = [
     { key: 'twitch', match: /twitch/i, mark: 'twitch', bg: '#9146ff', fg: '#fff' },
     { key: 'tf1', match: /tf1/i, text: 'TF1+', bg: 'linear-gradient(135deg,#071a4d,#1d4ed8)', fg: '#fff' },
     { key: 'crunchyroll', match: /crunchyroll/i, mark: 'crunchyroll', bg: '#f47521', fg: '#fff' },
+    { key: 'jellyfin', match: /jellyfin/i, text: 'Jellyfin', bg: 'linear-gradient(135deg,#00a4dc,#aa5cc3)', fg: '#fff' },
+
+    // Consoles / HDMI inputs (used by inputs in config.js). No bundled mark, so a text logo.
+    { key: 'firetv', text: 'Fire TV', bg: 'linear-gradient(135deg,#0a1f33,#146eb4)', fg: '#fff' },
+    { key: 'legiongo', text: 'Legion Go', bg: 'linear-gradient(135deg,#1a1a1a,#d2000f)', fg: '#fff' },
 
     // Consoles (used by inputs in config.js)
     { key: 'playstation', mark: 'playstation', bg: 'linear-gradient(135deg,#00205c,#0070d1)', fg: '#fff' },
